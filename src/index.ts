@@ -17,12 +17,12 @@ export function wyDeepClone<T>(obj: T): T {
     // if (obj instanceof Date) {
     //     return new Date(obj.getTime()) as any
     // }
-    // if (obj instanceof Array) {
-    //     return obj.reduce((arr, cur) => {
-    //         arr.push(wyDeepClone(cur))
-    //         return arr
-    //     }, []) as any
-    // }
+    if (obj instanceof Array) {
+        return obj.reduce((arr, cur) => {
+            arr.push(wyDeepClone(cur))
+            return arr
+        }, []) as any
+    }
     let newObj = {} as { [key: string]: any }
     for (let key in obj) {
         if (obj.hasOwnProperty(key)) {
@@ -38,6 +38,9 @@ export function wyDeepClone<T>(obj: T): T {
  */
 export function wyArraySort<T>(arr: T[], compareFunction?: (a: T, b: T) => number) {
     const newArr = wyDeepClone(arr)
-    newArr.sort(compareFunction)
-    return newArr
+    if (newArr instanceof Array) {
+        newArr.sort(compareFunction)
+        return newArr
+    }
+    return
 }
