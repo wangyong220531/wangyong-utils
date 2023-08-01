@@ -2,7 +2,7 @@
 
 ## Intro
 
-A lib for improving the efficiency of data processing in your project
+A lib provides many methods to handle data
 
 ## Quick Start
 
