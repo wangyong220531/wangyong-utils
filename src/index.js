@@ -20,12 +20,12 @@ function wyDeepClone(obj) {
     // if (obj instanceof Date) {
     //     return new Date(obj.getTime()) as any
     // }
-    // if (obj instanceof Array) {
-    //     return obj.reduce((arr, cur) => {
-    //         arr.push(wyDeepClone(cur))
-    //         return arr
-    //     }, []) as any
-    // }
+    if (obj instanceof Array) {
+        return obj.reduce((arr, cur) => {
+            arr.push(wyDeepClone(cur));
+            return arr;
+        }, []);
+    }
     let newObj = {};
     for (let key in obj) {
         if (obj.hasOwnProperty(key)) {
@@ -41,7 +41,10 @@ exports.wyDeepClone = wyDeepClone;
  */
 function wyArraySort(arr, compareFunction) {
     const newArr = wyDeepClone(arr);
-    newArr.sort(compareFunction);
-    return newArr;
+    if (newArr instanceof Array) {
+        newArr.sort(compareFunction);
+        return newArr;
+    }
+    return;
 }
 exports.wyArraySort = wyArraySort;
