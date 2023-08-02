@@ -1,6 +1,6 @@
 {
     "name": "wangyong-utils",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "A lib provides many methods to handle data.",
     "main": "src/index.js",
     "scripts": {
@@ -12,8 +12,8 @@
         "deDuplicate",
         "sort",
         "toSorted",
-        "deepClone",
-        "deepCopy"
+        "deep clone",
+        "deep copy"
     ],
     "author": "",
     "license": "ISC",

@@ -14,9 +14,9 @@ export function wyDeepClone<T>(obj: T): T {
     if (typeof obj !== "object" || obj === null) {
         return obj
     }
-    // if (obj instanceof Date) {
-    //     return new Date(obj.getTime()) as any
-    // }
+    if (obj instanceof Date) {
+        return new Date(obj.getTime()) as any
+    }
     if (obj instanceof Array) {
         return obj.reduce((arr, cur) => {
             arr.push(wyDeepClone(cur))
