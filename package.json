@@ -1,14 +1,19 @@
 {
     "name": "wangyong-utils",
-    "version": "1.2.0",
-    "description": "",
+    "version": "1.2.3",
+    "description": "A lib provides many methods to handle data.",
     "main": "src/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
         "utils",
-        "Array"
+        "Array",
+        "deDuplicate",
+        "sort",
+        "toSorted",
+        "deepClone",
+        "deepCopy"
     ],
     "author": "",
     "license": "ISC",
