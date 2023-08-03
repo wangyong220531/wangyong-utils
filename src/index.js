@@ -17,9 +17,9 @@ function wyDeepClone(obj) {
     if (typeof obj !== "object" || obj === null) {
         return obj;
     }
-    // if (obj instanceof Date) {
-    //     return new Date(obj.getTime()) as any
-    // }
+    if (obj instanceof Date) {
+        return new Date(obj.getTime());
+    }
     if (obj instanceof Array) {
         return obj.reduce((arr, cur) => {
             arr.push(wyDeepClone(cur));

@@ -74,7 +74,7 @@ const arr:City[] = [
     },
     {
         id: "005",
-        name: "Singapore",
+        name: "Tokyo",
         gdpPerCapita: 82800
     }
 ]
@@ -95,7 +95,7 @@ console.log(wyArraySort(arr, (a:City, b:City) => {
 //     },
 //     {
 //         id: "005",
-//         name: "Singapore",
+//         name: "Tokyo",
 //         gdpPerCapita: 82800
 //     },
 //     {
